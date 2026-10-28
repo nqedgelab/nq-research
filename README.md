@@ -126,14 +126,6 @@ in_sample = data.split(bars, "in_sample")  # also "validation" and "holdout"
 <details>
 <summary><b>What the cleaning does</b></summary>
 <br>
-
-- **Duplicates.** 112 timestamps appear twice, usually one bar with its volume split across two rows. They're merged and the volume is added.
-- **Time zone.** The source is in UTC; everything is converted to New York time, including daylight saving.
-- **Contract rolls.** Prices jump about 1% when the series switches to the next quarterly contract, and they aren't back-adjusted. Intraday strategies aren't affected. Anything held overnight must avoid `roll_window` sessions.
-- **Broken sessions.** 9 sessions in 2025 with missing or mixed-contract data are dropped. The four March 2020 circuit-breaker halts are real market events and are kept.
-
-`data.session_report()` shows the quality check for every session.
-
 </details>
 
 <details>
