@@ -2,8 +2,6 @@
 data/
 *.parquet
 *.feather
-# Trade lists hold prices derived from the data
-backtests/**/trades_*.csv
 
 # Secrets
 .env
@@ -15,6 +13,7 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+*.egg-info/
 
 # OS / editor
 .DS_Store

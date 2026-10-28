@@ -1,3 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nqlab"
+version = "0.1.0"
+description = "Shared data loader, research splits and artwork for NQ Lab hypotheses"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2", "pyarrow>=15"]
+
+[tool.setuptools]
+packages = ["nqlab"]
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
-testpaths = ["tests", "backtests"]
+testpaths = ["tests"]

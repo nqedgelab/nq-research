@@ -2,6 +2,9 @@
 
 Newest first. What was decided, and why.
 
+## 2026-10-28: One repo per hypothesis, one book for everything
+Each hypothesis now lives in its own repo (`nq-hNNN-short-name`): the hypothesis file, the backtest, its rule tests and the results. This repo is the book: the record of every idea, a chapter per hypothesis, the decisions log, and the shared `nqlab` library. Hypothesis repos install `nqlab` pinned to a tagged version, so changing the loader later can't silently change an old result. H-001 was moved out with its history; its original commits (a701edd, c511834) also remain in this repo's log.
+
 ## 2026-10-28: Fixed data splits, set before any test
 In sample 2015–2021 (ideas are built here), validation 2022–2023 (checked once per idea), holdout 2024 onward (touched only for a final verdict). Set in `nqlab/data.py` before any hypothesis exists. Moving them after seeing results would let the holdout leak into the research.
 

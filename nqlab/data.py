@@ -58,10 +58,14 @@ SPLITS = {
 
 
 def data_dir() -> Path:
-    """Return NQ_DATA_DIR from the environment or the repo's .env file."""
+    """Return NQ_DATA_DIR from the environment, or from the nearest .env file
+    in the current directory or its parents."""
     value = os.environ.get("NQ_DATA_DIR")
-    env_file = Path(__file__).resolve().parent.parent / ".env"
-    if not value and env_file.exists():
+    here = Path.cwd().resolve()
+    for folder in [here, *here.parents]:
+        env_file = folder / ".env"
+        if value or not env_file.exists():
+            continue
         for line in env_file.read_text(encoding="utf-8").splitlines():
             key, _, rest = line.partition("=")
             if key.strip() == "NQ_DATA_DIR":
