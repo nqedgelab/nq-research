@@ -13,6 +13,22 @@ Testing trading ideas on NQ (Nasdaq-100 E-mini) futures: written down first, tes
 
 Decisions about process and rules are logged in [`decisions.md`](decisions.md).
 
+## Data
+
+Every backtest loads bars through `nqlab.data`, so they all share the same cleaning rules:
+
+```python
+from nqlab import data
+
+bars = data.load()                       # clean 1-minute bars, New York time
+ins = data.split(bars, "in_sample")      # 2015–2021; also "validation", "holdout"
+report = data.session_report(data.clean(data.load_raw()))  # per-session data quality
+```
+
+Columns: `open`, `high`, `low`, `close`, `volume`, `session` (the trading date; the 18:00 ET open belongs to the next day), `rth` (09:30–16:00 ET), and `roll_window` (sessions around a quarterly contract roll). Prices are **not** back-adjusted, so don't hold positions across a roll. Sessions with broken data are dropped. The rules and splits are explained in [`decisions.md`](decisions.md).
+
+Setup: `pip install -r requirements.txt`, set `NQ_DATA_DIR` in `.env`, and run `python -m pytest`.
+
 ## What's not here
 
 - **Market data.** Exchange and vendor data can't be redistributed. Raw data lives in `data/`, which is git-ignored.
