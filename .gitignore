@@ -2,6 +2,8 @@
 data/
 *.parquet
 *.feather
+# Trade lists hold prices derived from the data
+backtests/**/trades_*.csv
 
 # Secrets
 .env
