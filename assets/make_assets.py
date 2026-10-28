@@ -24,8 +24,7 @@ def main():
                   f'<tspan dx="14" fill="{t["sub"]}">·</tspan><tspan dx="14">Edges found: </tspan>'
                   f'<tspan fill="{t["accent"]}" font-weight="700">0 so far</tspan>')
         art.write(OUT, "banner", name, art.banner(
-            t, "nq-research", "The NQ Lab book: every hypothesis, in one place", status,
-            "H-001 · −0.014R · rejected"))
+            t, "nq-research", "The NQ Lab book: every hypothesis, in one place", status))
         art.write(OUT, "splits", name, art.splits(t))
         for num, (slug, title, sub) in enumerate(SECTIONS, 1):
             art.write(OUT, f"section-{slug}", name, art.section(t, num, slug, title, sub))
