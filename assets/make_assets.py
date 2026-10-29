@@ -20,7 +20,7 @@ SECTIONS = [
 
 def main():
     for name, t in art.THEMES.items():
-        status = (f'Ideas tested: <tspan font-weight="700">1</tspan>'
+        status = (f'Ideas tested: <tspan font-weight="700">2</tspan>'
                   f'<tspan dx="14" fill="{t["sub"]}">·</tspan><tspan dx="14">Edges found: </tspan>'
                   f'<tspan fill="{t["accent"]}" font-weight="700">0 so far</tspan>')
         art.write(OUT, "banner", name, art.banner(

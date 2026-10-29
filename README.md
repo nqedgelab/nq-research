@@ -1,15 +1,15 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
-  <img src="./assets/banner-dark.svg" alt="nq-research, the NQ Lab book. Ideas tested: 1. Edges found: 0 so far." width="100%" />
+  <img src="./assets/banner-dark.svg" alt="nq-research, the NQ Lab book. Ideas tested: 2. Edges found: 0 so far." width="100%" />
 </picture>
 
 <br>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/hypotheses-1-3b82f6?style=flat-square&labelColor=1e293b" alt="hypotheses: 1" />
+  <img src="https://img.shields.io/badge/hypotheses-2-3b82f6?style=flat-square&labelColor=1e293b" alt="hypotheses: 2" />
   <img src="https://img.shields.io/badge/supported-0-22c55e?style=flat-square&labelColor=1e293b" alt="supported: 0" />
-  <img src="https://img.shields.io/badge/rejected-1-ef4444?style=flat-square&labelColor=1e293b" alt="rejected: 1" />
+  <img src="https://img.shields.io/badge/rejected-2-ef4444?style=flat-square&labelColor=1e293b" alt="rejected: 2" />
   <img src="https://img.shields.io/badge/nqlab-v0.1.0-14b8a6?style=flat-square&labelColor=1e293b" alt="nqlab v0.1.0" />
   <img src="https://img.shields.io/badge/data-NQ%201--min%202015%E2%80%932025-6366f1?style=flat-square&labelColor=1e293b" alt="data: NQ 1-minute, 2015 to 2025" />
   <img src="https://img.shields.io/badge/python-3.14-0ea5e9?style=flat-square&logo=python&logoColor=white&labelColor=1e293b" alt="python 3.14" />
@@ -35,8 +35,9 @@ The book for NQ Lab's research on Nasdaq-100 E-mini (NQ) futures. Every hypothes
 | | Hypothesis | Trades | Expectancy | 95% CI | Verdict | Chapter |
 |:---:|:---|:---:|:---:|:---:|:---:|:---:|
 | [H-001](https://github.com/nqedgelab/nq-h001-opening-range) | Opening range breakout | 1,775 | −0.014R | −0.08 to +0.05 | ![rejected](https://img.shields.io/badge/rejected-ef4444?style=flat-square) | [Read](chapters/H-001-opening-range.md) |
+| [H-002](https://github.com/nqedgelab/nq-h002-intraday-momentum) | Intraday momentum, first to last half hour | 1,520 | −0.80 bp | −2.36 to +0.83 | ![rejected](https://img.shields.io/badge/rejected-ef4444?style=flat-square) | [Read](chapters/H-002-intraday-momentum.md) |
 
-<sub>Expectancy is per trade, after costs, on the furthest period each idea reached.</sub>
+<sub>Expectancy is per trade, after costs, on the furthest period each idea reached. It's in R when the idea has a stop, and in basis points of the entry price when it doesn't.</sub>
 
 </div>
 
