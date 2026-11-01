@@ -2,6 +2,9 @@
 
 Newest first. What was decided, and why.
 
+## 2026-11-01: Validation has been seen
+H-003 was the first hypothesis to reach the validation period (2022–2023), and it failed there. That period is no longer unseen. Its shape is now known: overnight returns were negative, 2022 fell, and 2023's gains came mostly in regular hours. The splits don't move. Validation still gives each idea a once-only test it was never fitted to. But any later hypothesis touching the overnight or regular-hours split must name this in its case against, since it was written by someone who has seen the answer. Holdout (2024 onward) remains untouched.
+
 ## 2026-10-28: One repo per hypothesis, one book for everything
 Each hypothesis now lives in its own repo (`nq-hNNN-short-name`): the hypothesis file, the backtest, its rule tests and the results. This repo is the book: the record of every idea, a chapter per hypothesis, the decisions log, and the shared `nqlab` library. Hypothesis repos install `nqlab` pinned to a tagged version, so changing the loader later can't silently change an old result. H-001 was moved out with its history; its original commits (a701edd, c511834) also remain in this repo's log.
 
